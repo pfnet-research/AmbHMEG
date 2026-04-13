@@ -1,0 +1,24 @@
+[project]
+name = "gryphgen"
+version = "0.1.0"
+requires-python = "==3.10.*"
+dependencies = [
+  "diffusers>=0.35.2",
+  "mmcv",
+  "mmengine",
+  "more-itertools",
+  "positional-encodings[pytorch]",
+  "toolz",
+  "torch==2.9.*",
+  "torchvision>=0.24.1",
+  "tqdm",
+]
+
+[build-system]
+requires = ["setuptools", "torch>=2.4"]
+
+[tool.setuptools.packages.find]
+include = ["gryphgen"]
+
+[tool.uv.extra-build-dependencies]
+mmcv = ["setuptools==80.10.2"]
